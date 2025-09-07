@@ -8,9 +8,11 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new LoginGUI().setVisible(true);
+                new Form.LoginGUI().setVisible(true);
             }
         });
+
+
 
 //        final Scanner scanner = new Scanner(System.in);
 //        String username;

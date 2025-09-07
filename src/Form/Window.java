@@ -1,3 +1,5 @@
+package Form;
+
 import javax.swing.*;
 import java.awt.*;
 
