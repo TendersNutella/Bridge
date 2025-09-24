@@ -41,6 +41,13 @@ public class RegisterGUI extends Window{
 
         // create button
         JButton registerButton = Window.CreateButton("Register", 220, 330, 110, 30, 18);
+        registerButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e){
+                RegisterGUI.this.dispose();
+                new LoginGUI().setVisible(true);
+            }
+        });
         add(registerButton);
 
         // create link button to login page

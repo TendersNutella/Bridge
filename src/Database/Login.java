@@ -15,29 +15,14 @@ public class Login {
         this.password = password;
     }
 
-    public int GetId(){
-        return id;
-    }
+    public int GetId(){ return id; }
+    public void SetId(int id){this.id = id; }
 
-    public String GetUsername(){
-        return username;
-    }
+    public String GetUsername(){ return username; }
+    public void SetUsername(String username){ this.username = username; }
 
-    public String GetPassword(){
-        return password;
-    }
-
-    public void SetId(int id){
-        this.id = id;
-    }
-
-    public void SetUsername(String username){
-        this.username = username;
-    }
-
-    public void SetPassword(String password){
-        this.password = password;
-    }
+    public String GetPassword(){ return password; }
+    public void SetPassword(String password){ this.password = password; }
 
     // Overwrite the toString method that already exist
     @Override

@@ -1,8 +1,14 @@
 package Form;
 
+import Database.LoginDB;
+import Database.LoginDB;
+import Form.*;
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class LoginGUI extends Window{
     public LoginGUI(){
@@ -33,6 +39,17 @@ public class LoginGUI extends Window{
 
         // login button
         JButton loginButton = Window.CreateButton("Login", 220, 300, 100, 30, 18);
+        loginButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if(LoginDB.CheckUser(usernameField.getText())){
+                    System.out.println("Login successfully!");
+                }else{
+                    System.out.println("You doesn't have an account!");
+                }
+
+            }
+        });
         add(loginButton);
 
         // link to the register page
@@ -45,6 +62,6 @@ public class LoginGUI extends Window{
             }
         });
         add(registerLink);
-
     }
+
 }
