@@ -2,7 +2,6 @@ package Form;
 
 import Database.Login;
 import Database.LoginDB;
-
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
