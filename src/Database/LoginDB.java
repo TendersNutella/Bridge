@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LoginDB {
-    public static int add(Login users){
+    public static int Add(Login users){
         // Sql basic request to insert data into a table
         var sql = "INSERT INTO users(username, password) "
                 + "VALUES(?,?)";

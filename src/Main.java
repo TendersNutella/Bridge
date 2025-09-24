@@ -25,7 +25,7 @@ public class Main {
 //        }
 //
 //        // add rows to the table
-//        int id = LoginDB.add(new Login("Tenders", "Tenders123"));
+//        int id = LoginDB.Add(new Login("Tenders", "Tenders123"));
 //        System.out.println("Inserted id : " + id);
 //
 //        // delete rows in the table
