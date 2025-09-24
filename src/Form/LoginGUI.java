@@ -39,15 +39,17 @@ public class LoginGUI extends Window{
 
         // login button
         JButton loginButton = Window.CreateButton("Login", 220, 300, 100, 30, 18);
+        // If the username enter in the field is already taken it will return an error if it is not the case it will open the main window
         loginButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if(LoginDB.CheckUser(usernameField.getText())){
+                if(LoginDB.CheckUser(usernameField.getText()) && !passwordField.getText().isEmpty()) {
                     System.out.println("Login successfully!");
+                    LoginGUI.this.dispose();
+                    new BridgeGUI().setVisible(true);
                 }else{
-                    System.out.println("You doesn't have an account!");
+                    System.out.println("Problem encountered");
                 }
-
             }
         });
         add(loginButton);

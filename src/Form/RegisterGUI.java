@@ -1,5 +1,8 @@
 package Form;
 
+import Database.Login;
+import Database.LoginDB;
+
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -43,9 +46,18 @@ public class RegisterGUI extends Window{
         JButton registerButton = Window.CreateButton("Register", 220, 330, 110, 30, 18);
         registerButton.addMouseListener(new MouseAdapter() {
             @Override
-            public void mouseClicked(MouseEvent e){
-                RegisterGUI.this.dispose();
-                new LoginGUI().setVisible(true);
+            public void mouseClicked(MouseEvent e) {
+                if(LoginDB.CheckUser(usernameField.getText())){
+                    System.out.println("Username already taken!");
+                }else if(passwordField.getText().equals(rePasswordField.getText())){
+                    System.out.println("Register successfully");
+                    LoginDB.add(new Login(usernameField.getText(), passwordField.getText()));
+                    RegisterGUI.this.dispose();
+                    new BridgeGUI().setVisible(true);
+                }
+                else{
+                    System.out.println("Problem encountered");
+                }
             }
         });
         add(registerButton);

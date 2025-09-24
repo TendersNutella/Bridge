@@ -13,7 +13,7 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new ErrorGUI().setVisible(true);
+                new LoginGUI().setVisible(true);
             }
         });
 
