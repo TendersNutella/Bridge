@@ -12,3 +12,12 @@ Here is the different table I have in my database :
 I use PgAdmin as an interface for my database, but I can do the same thing in the Ubuntu Server terminal as well : 
 
 <img width="343" height="81" alt="image" src="https://github.com/user-attachments/assets/2454703b-9f4e-4c74-8e18-b46cf94c69b2" />
+
+
+Here is the look of my application for now : 
+
+<img width="598" height="478" alt="image" src="https://github.com/user-attachments/assets/1e6ef7e3-5b93-4707-85ee-8d9c4882fed7" /> 
+
+<img width="630" height="486" alt="image" src="https://github.com/user-attachments/assets/b2af398e-7cd5-4d7c-8a17-f5035258796a" />
+
+
