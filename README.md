@@ -4,3 +4,5 @@ Bridge is a password manager application. To make this application I'm using Jav
 My dedicated server runs on Ubuntu Server and it store my database, it has no other fonction other than that for now.
 
 I'm using the package Form from Java to make my GUI and a postgresql Driver to interact with my database.
+
+****<img width="287" height="66" alt="image" src="https://github.com/user-attachments/assets/c90dbb87-9670-46d3-be51-0d3f6affbb02" />
