@@ -3,26 +3,37 @@ package Database;
 public class Login {
     private int id;
     private String username;
-    private String password;
+    private String passwordHash;
 
-    public Login(int id, String username, String password){
-        this(username, password);
+    public Login(int id, String username){
+        this(username);
         this.id = id;
     }
 
-    public Login(String username, String password){
+    public Login(String username){
         this.username = username;
-        this.password = password;
     }
 
-    public int GetId(){ return id; }
-    public void SetId(int id){this.id = id; }
+    public int GetId(){
+        return id;
+    }
+    public void SetId(int id){
+        this.id = id;
+    }
 
-    public String GetUsername(){ return username; }
-    public void SetUsername(String username){ this.username = username; }
+    public String GetUsername(){
+        return username;
+    }
+    public void SetUsername(String username){
+        this.username = username;
+    }
 
-    public String GetPassword(){ return password; }
-    public void SetPassword(String password){ this.password = password; }
+    public String GetPassword(){
+        return passwordHash;
+    }
+    public void SetPassword(String password){
+        this.passwordHash = password;
+    }
 
     // Overwrite the toString method that already exist
     @Override
@@ -30,7 +41,7 @@ public class Login {
         return "Login{" +
                 "id =" + id +
                 ", username ='" + username + '\'' +
-                ", password =" + password +
+                // ", password =" + passwordHash +
                 '}';
     }
 }

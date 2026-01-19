@@ -50,7 +50,7 @@ public class RegisterGUI extends Window{
                     System.out.println("Username already taken!");
                 }else if(passwordField.getText().equals(rePasswordField.getText())){
                     System.out.println("Register successfully");
-                    LoginDB.Add(new Login(usernameField.getText(), passwordField.getText()));
+                    LoginDB.Add(new Login(usernameField.getText()));
                     RegisterGUI.this.dispose();
                     new BridgeGUI().setVisible(true);
                 }

@@ -8,13 +8,13 @@ import java.util.List;
 public class LoginDB {
     public static int Add(Login users){
         // Sql basic request to insert data into a table
-        var sql = "INSERT INTO users(username, password) "
-                + "VALUES(?,?)";
+        var sql = "INSERT INTO users(username) "
+                + "VALUES(?)";
 
         try(var connection = DataBase.connect();
                 var pstmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
             pstmt.setString(1, users.GetUsername());
-            pstmt.setString(2, users.GetPassword());
+            // pstmt.setString(2, users.GetPassword());
 
             int insertedRow = pstmt.executeUpdate();
             if (insertedRow > 0){
@@ -43,28 +43,6 @@ public class LoginDB {
         return 0;
     }
 
-    public static List<Login> Querying(){
-        var users = new ArrayList<Login>();
-        var sql = "SELECT id, username, password FROM users ORDER BY id";
-
-        try(var connection = DataBase.connect()) {
-            assert connection != null; // In case the database connection return is null
-            try(var statement = connection.createStatement()){
-                var resultset = statement.executeQuery(sql);
-
-                while (resultset.next()){
-                    var user = new Login(
-                            resultset.getInt("id"),
-                            resultset.getString("username"),
-                            resultset.getString("password"));
-                    users.add(user);
-                }
-            }
-        } catch (SQLException e){
-            e.printStackTrace();
-        }
-        return users;
-    }
 
     public static int Update(int id, String username, String password){
         int affectedRows = 0;
